@@ -12,6 +12,8 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
+const basePath = process.env.BASE_PATH || ''
+
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
@@ -23,6 +25,9 @@ export const metadata: Metadata = {
   title: {
     default: siteMetadata.title,
     template: `%s | ${siteMetadata.title}`,
+  },
+  icons: {
+    icon: `${basePath}/static/favicons/favicon.ico?v=2`,
   },
   description: siteMetadata.description,
   openGraph: {
@@ -59,8 +64,6 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const basePath = process.env.BASE_PATH || ''
-
   return (
     <html
       lang={siteMetadata.language}
