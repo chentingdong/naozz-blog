@@ -11,7 +11,7 @@ const siteMetadata = {
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
   mastodon: '',
-  email: 'tingdong@naozz.com',
+  email: 'info@naozz.com',
   github: 'https://github.com/chentingdong',
   x: '',
   facebook: '',
