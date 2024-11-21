@@ -2,6 +2,9 @@
   "name": "@naozz/blog",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "v20.x"
+  },
   "scripts": {
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",

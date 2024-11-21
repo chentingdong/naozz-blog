@@ -132,3 +132,5 @@ dist
 
 # others
 .contentlayer
+.vercel
+.env*.local
