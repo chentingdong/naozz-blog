@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Naozz Blog</title>
+      <link>https://blog.naozz.com/blog</link>
+      <description></description>
+      <language>en-us</language>
+      <managingEditor>tingdong@naozz.com (Naozz Team)</managingEditor>
+      <webMaster>tingdong@naozz.com (Naozz Team)</webMaster>
+      <lastBuildDate>Thu, 20 Nov 2014 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://blog.naozz.com/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://blog.naozz.com/blog/naozz/naozz-mission</guid>
+    <title>Trainme Mission and Vision</title>
+    <link>https://blog.naozz.com/blog/naozz/naozz-mission</link>
+    <description>A new platform focused on personalized training and fitness plans for endurance sports</description>
+    <pubDate>Thu, 20 Nov 2014 00:00:00 GMT</pubDate>
+    <author>tingdong@naozz.com (Naozz Team)</author>
+    <category>Trainme</category>
+  </item>
+
+    </channel>
+  </rss>
