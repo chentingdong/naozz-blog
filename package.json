@@ -52,6 +52,7 @@
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
     "@types/mdx": "^2.0.12",
+    "@types/node": "^22.9.1",
     "@types/react": "^18.2.73",
     "@typescript-eslint/eslint-plugin": "^8.12.0",
     "@typescript-eslint/parser": "^8.12.0",
