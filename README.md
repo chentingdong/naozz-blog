@@ -8,6 +8,13 @@
 
 Naozz Blog is a platform that showcases various projects developed by Naozz, an AI-powered company focused on improving the quality of life through innovative solutions.
 
+## Development
+
+It is a no-database, mark down based blog system that utilizes Giscus to interact with GitHub discussions.
+To create/modify a company blog, add a mdx file under app/blog/\*\* and commit the codes.
+
+The project is currently deployed to production with Vercel.
+
 ## Projects Related
 
 ### Naozz
