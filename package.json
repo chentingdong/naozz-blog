@@ -15,6 +15,9 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.15.5",
+    "@clerk/nextjs": "^6.3.4",
+    "@clerk/types": "^4.34.0",
     "@headlessui/react": "2.2.0",
     "@next/bundle-analyzer": "15.0.2",
     "@tailwindcss/forms": "^0.5.9",
