@@ -1,29 +1,30 @@
-import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer2/source-files'
-import { writeFileSync } from 'fs'
-import readingTime from 'reading-time'
-import { slug } from 'github-slugger'
-import path from 'path'
+import { ComputedFields, defineDocumentType, makeSource } from 'contentlayer2/source-files'
+import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
+import {
+  extractTocHeadings,
+  remarkCodeTitles,
+  remarkExtractFrontmatter,
+  remarkImgToJsx,
+} from 'pliny/mdx-plugins/index.js'
+
 import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic'
+import path from 'path'
+import readingTime from 'reading-time'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeCitation from 'rehype-citation'
+import rehypeKatex from 'rehype-katex'
+import rehypeKatexNoTranslate from 'rehype-katex-notranslate'
+import rehypePresetMinify from 'rehype-preset-minify'
+import rehypePrismPlus from 'rehype-prism-plus'
+// Rehype packages
+import rehypeSlug from 'rehype-slug'
+import { remarkAlert } from 'remark-github-blockquote-alert'
 // Remark packages
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
-import { remarkAlert } from 'remark-github-blockquote-alert'
-import {
-  remarkExtractFrontmatter,
-  remarkCodeTitles,
-  remarkImgToJsx,
-  extractTocHeadings,
-} from 'pliny/mdx-plugins/index.js'
-// Rehype packages
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeKatex from 'rehype-katex'
-import rehypeKatexNoTranslate from 'rehype-katex-notranslate'
-import rehypeCitation from 'rehype-citation'
-import rehypePrismPlus from 'rehype-prism-plus'
-import rehypePresetMinify from 'rehype-preset-minify'
 import siteMetadata from './data/siteMetadata'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
+import { slug } from 'github-slugger'
+import { writeFileSync } from 'fs'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
@@ -148,6 +149,7 @@ export const Authors = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'data',
   documentTypes: [Blog, Authors],
+  contentDirExclude: ['examples'],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
